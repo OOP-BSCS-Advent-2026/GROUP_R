@@ -27,8 +27,8 @@
     }
 
 //This is method one  that displays the prices of our products
-public static void priceList(String[] items, double[] prices) {
-    System.out.println("DAILYFRESH SHOP");
+public static void displaypriceList(String[] items, double[] prices) {
+    System.out.println("====DAILYFRESH SHOP ====");
     System.out.println("PRICE LIST");
 
 
@@ -80,7 +80,7 @@ public static void priceList(String[] items, double[] prices) {
                                     int[] quantities,
                                     double[] subtotals) {
 
-        System.out.println("RECEIPT ");
+        System.out.println("==== RECEIPT==== ");
 
         double grandTotal = 0;
 
