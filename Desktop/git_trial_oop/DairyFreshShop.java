@@ -44,7 +44,7 @@ public static void priceList(String[] items, double[] prices) {
     
     
 }
-/ Method 2: Calculate the subtotal and apply the correct discount
+//Method 2: Calculate the subtotal and apply the correct discount
     public static double calculateSubtotal(String item, double price, int quantity) {
 
         // Calculate the original subtotal
