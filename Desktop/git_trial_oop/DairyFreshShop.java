@@ -104,7 +104,33 @@ public static void displaypriceList(String[] items, double[] prices) {
             System.out.printf("%-15s x%d = UGX %.2f (No discount: Yogurt is never discounted)%n",
                     items[i], quantities[i], subtotals[i]);
         }
-        
+        // Cheese discount conditions
+        else if (items[i].equals("Cheese")) {
+
+            if (quantities[i] >= 3) {
+                System.out.printf("%-15s x%d = UGX %.2f (UGX 1,000 discount applied: bought 3 or more)%n",
+                        items[i], quantities[i], subtotals[i]);
+            } else {
+                System.out.printf("%-15s x%d = UGX %.2f (No discount: bought less than 3)%n",
+                        items[i], quantities[i], subtotals[i]);
+            }
+        }
+
+        // Eggs discount conditions
+        else if (items[i].equals("Eggs (tray)")) {
+
+            if (quantities[i] >= 4) {
+                System.out.printf("%-15s x%d = UGX %.2f (10%% discount applied: bought 4 or more trays)%n",
+                        items[i], quantities[i], subtotals[i]);
+            } else {
+                System.out.printf("%-15s x%d = UGX %.2f (No discount: bought less than 4 trays)%n",
+                        items[i], quantities[i], subtotals[i]);
+            }
+        }
+
+        // Add subtotal to grand total
+        grandTotal += subtotals[i];
+    }
 
         System.out.println("  .....  ");
         System.out.printf("TOTAL          = UGX %.2f%n", grandTotal);
