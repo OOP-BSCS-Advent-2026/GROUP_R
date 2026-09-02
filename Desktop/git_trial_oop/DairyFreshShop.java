@@ -85,22 +85,26 @@ public static void displaypriceList(String[] items, double[] prices) {
         double grandTotal = 0;
 
         // Loop through all four items
-        for (int i = 0; i < items.length; i++) {
+       for (int i = 0; i < items.length; i++) {
 
-            double originalSubtotal = prices[i] * quantities[i];
+        // Milk discount conditions
+        if (items[i].equals("Milk (litre)")) {
 
-            // Check whether a discount was applied
-            if (subtotals[i] < originalSubtotal) {
-                System.out.printf("%-15s x%d = UGX %.2f (discount applied)%n",
+            if (quantities[i] >= 6) {
+                System.out.printf("%-15s x%d = UGX %.2f (5%% discount applied: bought 6 or more litres)%n",
                         items[i], quantities[i], subtotals[i]);
             } else {
-                System.out.printf("%-15s x%d = UGX %.2f (no discount)%n",
+                System.out.printf("%-15s x%d = UGX %.2f (No discount: bought less than 6 litres)%n",
                         items[i], quantities[i], subtotals[i]);
             }
-
-            // Add the discounted subtotal to the grand total
-            grandTotal += subtotals[i];
         }
+         // Yogurt discount conditions
+        else if (items[i].equals("Yogurt")) {
+
+            System.out.printf("%-15s x%d = UGX %.2f (No discount: Yogurt is never discounted)%n",
+                    items[i], quantities[i], subtotals[i]);
+        }
+        
 
         System.out.println("  .....  ");
         System.out.printf("TOTAL          = UGX %.2f%n", grandTotal);
