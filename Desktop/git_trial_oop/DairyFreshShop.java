@@ -9,7 +9,7 @@
         // Customer quantities
         int[] quantities = {5, 2, 2, 4};
       // Display the shop price list
-        displayPriceList(items, prices);
+        displaypriceList(items, prices);
 
         // Calculate the discounted subtotal for each item
         double[] subtotals = new double[items.length];
@@ -138,6 +138,6 @@ public static void displaypriceList(String[] items, double[] prices) {
 
 
     
-}// This is the last of the code
+
     
 
