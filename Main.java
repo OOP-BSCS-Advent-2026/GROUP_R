@@ -48,7 +48,7 @@ public class Main { // main class.
     }
     
 
-   public static void displayPriceList(Item[] items) {
+   public static void displayPriceList(Item[] items) { //display pricelist method
      System.out.println("================== DAIRYFRESH SHOP ===================");
      System.out.println("==================== PRICE LIST ======================");
 
